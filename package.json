@@ -1,0 +1,57 @@
+{
+  "name": "MODULE-NAME",
+  "group": "MODULE-NAME",
+  "version": "0.0.1",
+  "description": "MODULE-DESCRIPTION",
+  "repository": [
+    {
+      "type": "git",
+      "url": "git@github.com:gilt/MODULE-NAME.git"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "YOUR-NAME",
+      "email": "YOUR-EMAIL"
+    }
+  ],
+  "dependencies": {
+    "bean": "^1.0.15",
+    "handlebars": "^3.0.0",
+    "moment": "^2.9.0",
+    "reqwest": "^1.1.5",
+    "when": "^3.7.2"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "chai": "^2.1.0",
+    "gulp": "^3.8.11",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-debug": "^2.0.1",
+    "gulp-jshint": "^1.9.2",
+    "gulp-less": "^3.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-requirejs": "^0.1.3",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1",
+    "jshint-stylish": "^1.0.1",
+    "mocha": "^2.1.0",
+    "mochify": "^2.6.0",
+    "phantomjs": "^1.9.16",
+    "require-dir": "^0.1.0",
+    "requirejs": "^2.1.16",
+    "sinon": "^1.12.2",
+    "vinyl-source-stream": "^1.0.0",
+    "vinyl-transform": "^1.0.0",
+    "watchify": "^2.4.0"
+  },
+  "scripts": {
+    "start": "mochify --watch",
+    "phantom": "mochify",
+    "wd": "mochify --wd",
+    "cover": "mochify --cover",
+    "test": "npm run phantom && npm run wd && npm run cover"
+  }
+}
