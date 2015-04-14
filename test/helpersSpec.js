@@ -1,7 +1,6 @@
 (function() {
 
   var chai = require('chai');
-  var moment = require('moment');
   var sinon = require('sinon');
   var should = chai.should();
   var sinonSandbox;

@@ -1,4 +1,4 @@
-var MODULE_NAME = 'ubar';
+var MODULE_NAME = 'MODULE-NAME';
 
 module.exports = {
 
@@ -34,14 +34,6 @@ module.exports = {
   ],
 
   source_map : [
-    'js/' + MODULE_NAME + '/device.js',
-    'js/' + MODULE_NAME + '/pubsub.js',
-    'js/' + MODULE_NAME + '/dom.js',
-    'js/' + MODULE_NAME + '/helpers.js',
-    'js/' + MODULE_NAME + '/resolver.js',
-    'js/' + MODULE_NAME + '/storage.js',
-    'js/' + MODULE_NAME + '/tracking.js',
-    'js/' + MODULE_NAME + '/config.js',
     'js/' + MODULE_NAME + '/' + MODULE_NAME + '.js',
   ]
 };
