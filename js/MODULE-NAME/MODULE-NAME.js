@@ -1,9 +1,9 @@
-// This is a file that MODULE_NAME.js depends on
+// This is a file that depends on javascript_dependency
 
 (function(exports, moduleName) {
 'use strict';
 
-function create () {
+function create (dep) {
 
   /**
    * Description of method
@@ -22,21 +22,21 @@ function create () {
 }
 
 if (typeof define === 'function' && define.amd) {
-  define(moduleName, [], create);
+  define(moduleName, ['./javascript_dependency'], create);
 
 } else if (typeof module === 'object' && module.exports) {
   /*
     Using CommonJS syntax, we have to explicitly require each
     module because browserify uses static module analysis.
   */
-  module.exports = create();
+  module.exports = create(require('./javascript_dependency'));
 
 } else {
   /*
     Gilt build syntax. 'exports' variable could be window here
     or an empty object, as in Gilt's case
   */
-  exports[moduleName] = create();
+  exports[moduleName] = create(exports.javascript_dependency || javascript_dependency);
 }
 
-}(typeof exports === 'object' && exports || this, 'javascript_dependency' /* moduleName */));
+}(typeof exports === 'object' && exports || this, 'MODULE-NAME' /* moduleName */));

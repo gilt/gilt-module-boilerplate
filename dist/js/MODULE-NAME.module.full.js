@@ -3,9 +3,7 @@
 (function(exports, moduleName) {
 'use strict';
 
-
-
-function create (app) {
+function create (dep) {
 
   /**
    * Description of method
@@ -23,17 +21,15 @@ function create (app) {
 
 }
 
-
-
 if (typeof define === 'function' && define.amd) {
-  define(moduleName, ['./app'], create);
+  define(moduleName, ['./javascript_dependency'], create);
 
 } else if (typeof module === 'object' && module.exports) {
   /*
     Using CommonJS syntax, we have to explicitly require each
     module because browserify uses static module analysis.
   */
-  module.exports = create(require('./app'));
+  module.exports = create(require('./javascript_dependency'));
 
 } else {
   /*
@@ -43,4 +39,4 @@ if (typeof define === 'function' && define.amd) {
   exports[moduleName] = create(exports.javascript_dependency || javascript_dependency);
 }
 
-}(typeof exports === 'object' && exports || this, 'app' /* moduleName */));
+}(typeof exports === 'object' && exports || this, 'MODULE-NAME' /* moduleName */));

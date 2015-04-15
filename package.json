@@ -15,7 +15,7 @@
       "email": "YOUR-EMAIL"
     }
   ],
-  "dependencies": { },
+  "dependencies": {},
   "devDependencies": {
     "beefy": "^2.1.3",
     "browserify": "^9.0.3",

@@ -26,14 +26,15 @@ module.exports = {
   },
 
   ext_deps : [
-    'handlebars',
-    'moment',
-    'when',
-    'bean',
-    'reqwest'
+    // 'handlebars',
+    // 'moment',
+    // 'when',
+    // 'bean',
+    // 'reqwest'
   ],
 
   source_map : [
-    'js/' + MODULE_NAME + '/' + MODULE_NAME + '.js',
+    'js/' + MODULE_NAME + '/' + 'javascript-dependency' + '.js',
+    'js/' + MODULE_NAME + '/' + MODULE_NAME + '.js'
   ]
 };
